@@ -1,0 +1,163 @@
+ body::-webkit-scrollbar {
+  display: none;
+}
+
+body{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.glavni {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+}
+.appName {
+  text-align: center;
+}
+
+.inputHolder {
+  width: auto;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#todo {
+  width: 100%;
+  flex-grow: 5;
+  height: 45px;
+  border: none;
+  font-size: x-large;
+  background-color: antiquewhite;
+  padding: 5px;
+  outline: none;
+  transition: ease 500ms;
+}
+
+#todo:focus {
+  transition: 500ms;
+  background-color: rgba(250, 235, 215, 0.562);
+}
+
+.dodajBtn {
+  flex-grow: 1;
+  border: none;
+  background-color: burlywood;
+  font-weight: 900;
+}
+
+.zadatak {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(250, 235, 215, 0.562);
+  margin: 5px;
+  font-size: larger;
+  transition: ease-out 350ms;
+}
+
+.zadatak:hover {
+  transform: scale(5px);
+  box-shadow: 5px 10px 14px -10px #0000004b;
+  transition: ease-in 250ms;
+  transform: scale(1.014);
+  background-color: bisque;
+}
+
+.zadatak:hover .opcije {
+  opacity: 1;
+  visibility: visible;
+}
+
+.task {
+  font-size: larger;
+  border: 1px;
+  flex-grow: 1;
+}
+
+.opcije {
+  opacity: 0;
+  visibility: hidden;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
+.opcije:hover {
+  visibility: visible;
+}
+
+.todoLista {
+  
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+
+.prikazGreske{
+  position: fixed;
+    left: 35%;
+    right: 35%;
+    bottom: 0;
+    height: 50px;
+}
+
+
+/*Alert Box*/
+.alert {
+  margin-top: -20px;
+  padding: 5px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 12px;
+  line-height: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+
+  body{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  .glavni{
+    width: 95%
+  }
+
+  .inputHolder{
+    background-color: #f44336;
+    box-shadow: 5px 15px 14px -10px #0000004b;
+    position:sticky ;
+    top:15px;
+    width: 100%;
+    z-index: 1;
+    
+  }
+
+  #todo:focus {
+    transition: 500ms;
+    background-color: rgb(250, 235, 215);
+  }
+
+  .prikazGreske{
+    position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 50px;
+  }
+
+}
